@@ -40,6 +40,12 @@ submit.addEventListener('click', function(){
         console.log(discountAmmount);
         console.log(ticketCost);
     }
+
+    //3.5 calcolo vagone e numero treno
+    let trainCodeNumber = Math.floor(Math.random() * 2000 + 1000);
+    console.log(trainCodeNumber);
+    let wagonNumber = Math.floor(Math.random() * 10 + 1);
+    console.log(wagonNumber);
     
     //4 stampare tutto a video
     const nameSurname = document.getElementById('nameSurname');
@@ -47,11 +53,15 @@ submit.addEventListener('click', function(){
     const price = document.getElementById('price');
     const discount = document.getElementById('discount');
     const finalPrice = document.getElementById('finalPrice');
+    const trainCode = document.getElementById('trainCode');
+    const wagon = document.getElementById('wagon');
     
     nameSurname.innerText = `${takeName} ${takeSurname}`;
     kilometers.innerText = `${takeTotalKilometers}km`;
     price.innerText = `${ticketCost}$`;
     discount.innerText = `${discountAmmount}$`;
-    finalPrice.innerText = `${ticketDiscounted}$`;   
+    finalPrice.innerText = `${ticketDiscounted}$`;
+    trainCode.innerText = `Codice Treno: ${trainCodeNumber}`;
+    wagon.innerText = `Vagone N°${wagonNumber}`;
     
 });
