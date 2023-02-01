@@ -12,21 +12,28 @@
 </head>
 <body>
     <div class="container">
-        <input type="text" placeholder="Inserire Nome" id="name">
-        <input type="text" placeholder="Inserire Cognome" id="surname">
-        <input type="text" placeholder="Inserire km" id="giveKilometers">
-        <select name="tipologia di riduzione" id="reduction">
-            <option value="21">nessuna riduzione</option>
-            <option value="17">Minorenne</option>
-            <option value="66">Over 65</option>
-        </select>
-        <input id="submit" type="button" value="Submit">
-    </div>
-    <div class="container">
         <div class="m-5">
             <div class="card">
-                <div class="card-body bg-info">
-                    <h3 class="card-title" id="nameSurname"></h3>
+                <div class="card-body bg-secondary rounded">
+                    <h3 class="text-white text-center">Genera il tuo biglietto</h3>
+                    <input type="text" placeholder="Inserire Nome" id="name" class="form-control mb-2">
+                    <input type="text" placeholder="Inserire Cognome" id="surname" class="form-control mb-2">
+                    <input type="text" placeholder="Inserire km" id="giveKilometers" class="form-control mb-2">
+                    <select name="tipologia di riduzione" id="reduction" class="form-control mb-2">
+                        <option value="21" class="text-center">--Seleziona eventuale riduzione--</option>
+                        <option value="17">Under 18</option>
+                        <option value="66">Over 65</option>
+                    </select>
+                    <input id="submit" type="button" value="Submit" class="btn btn-info">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container d-none">
+        <div class="m-5">
+            <div class="card">
+                <div class="card-body bg-info rounded">
+                    <h3 class="card-title text-center" id="nameSurname"></h3>
                     <hr>
                     <div class="row row-cols-4">
                         <div class="col">
@@ -44,6 +51,12 @@
                         <div class="col">
                             <div class="text-center">Final Price:</div>
                             <div class="text-center" id="finalPrice"></div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row row-cols-2">
+                        <div class="col">
+                            <div class="text-center" id="trainCode"></div>
                         </div>
                     </div>
                 </div>

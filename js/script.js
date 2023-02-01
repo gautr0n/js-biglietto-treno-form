@@ -3,10 +3,12 @@ const name = document.getElementById('name');
 const surname = document.getElementById('surname');
 const personalAge = document.getElementById('reduction');
 const totalKilometers = document.getElementById('giveKilometers');
+const display = document.querySelector('.d-none');
 
 //2 calcolare costo al click
 let submit = document.querySelector('#submit');
 submit.addEventListener('click', function(){
+    display.classList.remove('d-none');
     let takeName = name.value;
     let takeSurname = surname.value;
     let takePersonalAge = personalAge.value;
