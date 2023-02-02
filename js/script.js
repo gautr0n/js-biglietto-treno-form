@@ -18,7 +18,7 @@ submit.addEventListener('click', function(){
     console.log(takePersonalAge);
     console.log(takeTotalKilometers);
 
-    let ticketCost = (takeTotalKilometers * 0.21).toFixed(2);
+    let ticketCost = takeTotalKilometers * 0.21;
     console.log(ticketCost);
     
     //3 calcolare sconti
